@@ -15,9 +15,14 @@
 	<input type="button" value="Play" onclick="startGame()";/>
 	<div id="board">
 	</div>
-	<script>
-		function startGame() {
-		}
+		<script>
+			function startGame() {
+				gameLoop();
+			}
+			function gameLoop() {
+				alert("Game Over!");
+				setTimeout(gameLoop, 3000);
+			}
 	</script>
 </body>
 </html>
