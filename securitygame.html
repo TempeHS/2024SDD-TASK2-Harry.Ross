@@ -46,6 +46,8 @@
 				for(var index = 0; index < 6; index ++) {
 					board.children[index].innerHTML = "Guest";
 				}
+				var randomNumber = Math.floor(Math.random() * 6) + 1;
+				board.children[randomNumber-1].innerHTML = "Thief";
 			}
 			function gameLoop() {
 				peopleVisible = !peopleVisible;
