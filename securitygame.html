@@ -43,6 +43,7 @@
 			var peopleVisible = false;
 			function gameLoop() {
 				peopleVisible = !peopleVisible;
+				flashCharacters();
 				loops++;
 				if(loops < 12) {
 					setTimeout(gameLoop, 3000);
@@ -53,13 +54,7 @@
 			}
 			function flashCharacters() {
 				var board = document.getElementById("board");
-				var classToSet = "";
-				if(peopleVisible) {
-					classToSet = "character visible";
-				}
-				else {
-					classToSet = "character hidden";
-				}
+				var classToSet = peopleVisible ? "character visible" : "character hidden";
 				for(var index = 0; index < 6; index++) {
 					board.children[index].className = classToSet;
 				}
