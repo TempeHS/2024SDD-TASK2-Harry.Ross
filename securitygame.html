@@ -40,7 +40,9 @@
 				gameLoop();
 			}
 			var loops = 0;
+			var peopleVisible = false;
 			function gameLoop() {
+				peopleVisible = !peopleVisible;
 				loops++;
 				if(loops < 12) {
 					setTimeout(gameLoop, 3000);
