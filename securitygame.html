@@ -41,8 +41,15 @@
 			}
 			var loops = 0;
 			var peopleVisible = false;
+			function createCharacters() {
+				var board = document.getElementById("board");
+				for(var index = 0; index < 6; index ++) {
+					board.children[index].innerHTML = "Guest";
+				}
+			}
 			function gameLoop() {
 				peopleVisible = !peopleVisible;
+				createCharacters();
 				flashCharacters();
 				loops++;
 				if(loops < 12) {
