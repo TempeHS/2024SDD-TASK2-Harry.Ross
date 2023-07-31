@@ -10,7 +10,7 @@
 			width: 650px;
 		}
 		.character {
-			background-colour: lightblue;
+			background-color: lightblue;
 			width: 120px;
 			height: 120px;
 			padding: 10px;
@@ -33,9 +33,15 @@
 			function startGame() {
 				gameLoop();
 			}
+			var loops = 0;
 			function gameLoop() {
-				alert("Game Over!");
-				setTimeout(gameLoop, 3000);
+				loops++;
+				if(loops < 12) {
+					setTimeout(gameLoop, 3000);
+				}
+				else {
+					alert("Game Over!");
+				}
 			}
 	</script>
 </body>
