@@ -51,6 +51,19 @@
 					alert("Game Over!");
 				}
 			}
+			function flashCharacters() {
+				var board = document.getElementById("board");
+				var classToSet = "";
+				if(peopleVisible) {
+					classToSet = "character visible";
+				}
+				else {
+					classToSet = "character hidden";
+				}
+				for(var index = 0; index < 6; index++) {
+					board.children[index].className = classToSet;
+				}
+			}
 	</script>
 </body>
 </html>
